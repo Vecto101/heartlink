@@ -16,32 +16,34 @@ router.post("/register", async (req,res)=>{
 
 try{
 
-let code = generateCode();
+router.post("/register", async (req,res)=>{
 
-let hashedPassword = await bcrypt.hash(req.body.password,10);
+try{
+
+let code = generateCode()
+
+let hashedPassword = await bcrypt.hash(req.body.password,10)
 
 let user = new User({
-
 username:req.body.username,
 email:req.body.email,
 password:hashedPassword,
 partnerCode:code,
 partner:null
+})
 
-});
+await user.save()
 
-await user.save();
-
-res.json({message:"Account created",code:code});
+res.json({
+message:"Account created ❤️",
+partnerCode:code
+})
 
 }catch(err){
-
-console.log(err);
-res.json({message:"Registration error"});
-
+res.json({message:"Error creating account"})
 }
 
-});
+})
 
 router.post("/login", async (req,res)=>{
 
