@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>HeartLink Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>❤️ HeartLink Dashboard</h1>
+
+<h2>Connect With Your Partner</h2>
+
+<input id="partnerCode" placeholder="Enter Partner Code">
+
+<br><br>
+
+<button onclick="connectPartner()">Connect Partner</button>
+
+<p id="status"></p>
+
+<hr>
+
+<h2>Location Sharing</h2>
+
+<button onclick="getLocation()">Share My Location</button>
+
+<p id="location"></p>
+
+<iframe id="map" width="600" height="450"></iframe>
+<br><br>
+
+<button onclick="showPartner()">Show Partner Location</button>
+
+<p id="distance"></p>
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
