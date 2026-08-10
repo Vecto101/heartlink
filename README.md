@@ -3,6 +3,8 @@
 HeartLink is a private couple-focused web application designed to help partners stay connected through real-time communication, location sharing, and shared personal features.
 
 The project is currently under active development.
+You are free to contribute. 
+
 
 ## ✨ Features
 
